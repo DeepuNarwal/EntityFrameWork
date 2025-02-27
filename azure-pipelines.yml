@@ -25,6 +25,12 @@ steps:
     dotnetScannerVersion: '9'
     projectKey: 'DeepuNarwal_EntityFrameWork'
     projectName: 'webappservice-narwal'
+- task: SonarCloudAnalyze@3
+  inputs:
+    jdkversion: 'JAVA_HOME_17_X64'
+- task: SonarCloudAnalyze@3
+  inputs:
+    jdkversion: 'JAVA_HOME_17_X64'
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '$(solution)'
